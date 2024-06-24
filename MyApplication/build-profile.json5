@@ -1,0 +1,42 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+//        "bundleName": "com.huawei",
+        "name": "com.huawei",
+        "type": "HarmonyOS",
+        "material": {
+          "storePassword": "00000019890DA69A2DC6652CBBB13A50CCF501E211A77015375688808CE0D1B0730916241F7CF970C4",
+          "certpath": "D:/tools/hongmeng/perject/myapp.cer",
+          "keyAlias": "MYKEYFA",
+          "keyPassword": "000000194FE66850577FDCBB98B2595CF0FE65B288E64B407522209C8A1D84F2C9EF9BE002189E3377",
+          "profile": "D:/tools/hongmeng/perject/myappRelease.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "D:/tools/hongmeng/perject/mykeyfa.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

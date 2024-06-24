@@ -1,0 +1,15 @@
+{
+  "src": [
+    "pages/RankPage",
+    "pages/tobedone",
+    "pages/login",
+    "pages/index",
+    "pages/videoPage",
+    "pages/diagoPage",
+    "pages/animationPage",
+    "pages/webPage",
+    "pages/norifiacationPage",
+    "pages/entrys",
+    "pages/lottlePage"
+  ]
+}
