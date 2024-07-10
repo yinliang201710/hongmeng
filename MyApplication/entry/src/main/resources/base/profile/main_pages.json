@@ -10,6 +10,9 @@
     "pages/webPage",
     "pages/norifiacationPage",
     "pages/entrys",
-    "pages/lottlePage"
+    "pages/lottlePage",
+    "pages/taskmanagePage",
+    "pages/fashGame",
+    "pages/animationfish"
   ]
 }

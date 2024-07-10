@@ -2,6 +2,12 @@ import ResourceDs from '../view/resourceData'
 import ItemData from '../view/ItemData'
 import FeatureData from '../view/featrueData'
 import SettingData from '../view/settingData'
+@Extend(Column) function columnStyle(){
+    .height('100%')
+    .width("100%")
+    .justifyContent(FlexAlign.Start)
+    .backgroundColor("#fff3f3f6")
+}
 @Entry
 @Component
 struct Index {
@@ -44,7 +50,7 @@ struct Index {
             Text('列表').width('100%').textAlign(TextAlign.Start).fontSize(20).margin({top:30,bottom:10})
             this.getFeature()
           }.padding(10).height('100%').width('100%')
-        }.height('100%').width("100%").justifyContent(FlexAlign.Start).backgroundColor("#F3F5F6")
+        }.columnStyle()
       }.tabBar(this.tabsBuilder(0,'首页',$r('app.media.home_selected'), $r('app.media.home_normal')))
       TabContent() {
         Column() {
@@ -52,7 +58,7 @@ struct Index {
             Text('我的').width('100%').textAlign(TextAlign.Start).fontSize(30)
             this.getUserComponent()
           }.padding(10).height('100%').width('100%')
-        }.height('100%').width("100%").justifyContent(FlexAlign.Start).backgroundColor("#fff3f3f6")
+        }.columnStyle()
       }.tabBar(this.tabsBuilder(1,'我的',$r('app.media.mine_selected'), $r('app.media.mine_normal')))
     }
     .vertical(false)
@@ -67,7 +73,7 @@ struct Index {
         Text(title)
     }
   }
-  @Builder swiperComponent() {
+  @Builder swiperComponent() { // 可在内部定义，也可在外部，外部就是全局函数得加function
     Column(){
       Swiper(this.swiperController) {
         ForEach(this.datasource, (img: Resource) => {
